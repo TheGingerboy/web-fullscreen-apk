@@ -15,18 +15,22 @@ public class OnlyActivity extends AppCompatActivity {
 
         //Declare Web View
         WebView zoneWeb = (WebView) findViewById(R.id.zoneWeb);
-        zoneWeb .setWebViewClient(new WebViewClient());
-        zoneWeb.getSettings().setLoadWithOverviewMode(true);
-        zoneWeb.getSettings().setUseWideViewPort(true);
+        zoneWeb.setWebViewClient(new WebViewClient());
 
-        //Change Web View setting
+        //Declare Web View Setting
         WebSettings webSettings = zoneWeb.getSettings();
+
+        //Alter settings Web View
+        webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setDatabaseEnabled(true);
+        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webSettings.setAppCacheEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setBuiltInZoomControls(false);
+        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
+
 
         zoneWeb.loadUrl("http://192.168.0.20/zingage/");
     }
