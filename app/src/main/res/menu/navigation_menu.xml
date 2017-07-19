@@ -1,41 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/depart"
-        android:title="Depart"
+        android:id="@+id/accueil"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></item>
+        android:checkable="false"
+        android:icon="@drawable/logo"
+        android:title="Accueil"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/depart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/stat_sys_download_done"
+        android:title="Départ"
+        android:visible="true"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/retour"
-        android:title="Retour"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></item>
+        android:icon="@android:drawable/stat_sys_upload_done"
+        android:title="Retour"
+        android:visible="true"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/historique"
-        android:title="Historique"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></item>
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Historique"
+        android:visible="true"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/article"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Article"></item>
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="Article"
+        android:visible="true"
+        app:showAsAction="always|withText" />
 
     <item
         android:id="@+id/profil"
-        android:title="Profil"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></item>
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Profil"
+        android:visible="true"
+        app:showAsAction="always" />
 
     <item
-        android:id="@+id/avenir"
-        android:title="Avenir"
+        android:id="@+id/administration"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></item>
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Administration"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/deconnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Déconnexion"
+        android:visible="true"
+        app:showAsAction="always" />
 
 </menu>
